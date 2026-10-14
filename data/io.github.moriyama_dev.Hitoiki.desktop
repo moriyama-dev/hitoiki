@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Hitoiki
+GenericName=Pomodoro Timer
+GenericName[ja]=ポモドーロタイマー
+Comment=A pomodoro timer with a full-screen break reminder
+Comment[ja]=休憩時間を画面全体で知らせるポモドーロタイマー
+Exec=hitoiki
+Icon=io.github.moriyama_dev.Hitoiki
+Terminal=false
+Categories=Utility;GTK;
+Keywords=pomodoro;timer;break;focus;ポモドーロ;タイマー;休憩;
+StartupNotify=true
