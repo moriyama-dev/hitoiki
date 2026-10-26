@@ -1,7 +1,9 @@
 """「問題を報告」と「GitHub」の行き先を作る。GTK に依存しないので単体で試せる。"""
 import os
 import platform
+from datetime import datetime
 from urllib.parse import quote
+from zoneinfo import ZoneInfo
 
 from hitoiki import VERSION
 
@@ -27,6 +29,8 @@ def environment(gtk_version="", adw_version=""):
         f"OS: {os_description()} ({platform.machine()})",
         f"Desktop: {os.environ.get('XDG_CURRENT_DESKTOP', '')} {os.environ.get('XDG_SESSION_TYPE', '')}".rstrip(),
         f"Python: {platform.python_version()}",
+        f"Language: {os.environ.get('LANG', '').split('.')[0]}",
+        f"Time: {datetime.now(ZoneInfo('America/Toronto')).strftime('%Y-%m-%d %H:%M')} (America/Toronto)",
     ]
     if gtk_version:
         lines.append(f"GTK: {gtk_version}")
